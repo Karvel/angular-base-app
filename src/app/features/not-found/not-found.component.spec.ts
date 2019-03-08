@@ -5,10 +5,11 @@ import {
 }                            from '@angular/core/testing';
 
 import { environment }       from '../../../environments/environment.test';
+import { Logger }            from 'src/app/core/services/logger';
 import { NotFoundComponent } from './not-found.component';
 
 !environment.testIntegration
-? console.log('Integration skipped')
+? Logger.log('Integration skipped')
 : describe('[Integration] NotFoundComponent', () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;

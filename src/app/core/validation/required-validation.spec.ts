@@ -1,10 +1,11 @@
 import { FormControl }        from '@angular/forms';
 
 import { environment }        from '../../../environments/environment.test';
+import { Logger }             from 'src/app/core/services/logger';
 import { RequiredValidation } from './required-validation';
 
 !environment.testUnit
-? console.log('Unit skipped')
+? Logger.log('Unit skipped')
 : describe('[Unit] RequiredValidation required()', () => {
   const isRequiredValidator = RequiredValidation.required();
   const defaultPlaceholder: string = 'This field';
