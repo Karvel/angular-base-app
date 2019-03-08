@@ -8,9 +8,12 @@ import {
   TestBed,
 }                          from '@angular/core/testing';
 
+import { environment }     from '../../../environments/environment.test';
 import { SafeHTMLPipe }    from './safe-html.pipe';
 
-describe('[Unit] SafeHTMLPipe', () => {
+!environment.testUnit
+? console.log('Unit skipped')
+: describe('[Unit] SafeHTMLPipe', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [BrowserModule],
