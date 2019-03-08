@@ -9,10 +9,11 @@ import {
 }                          from '@angular/core/testing';
 
 import { environment }     from '../../../environments/environment.test';
+import { Logger }          from '../services/logger';
 import { SafeHTMLPipe }    from './safe-html.pipe';
 
 !environment.testUnit
-? console.log('Unit skipped')
+? Logger.log('Unit skipped')
 : describe('[Unit] SafeHTMLPipe', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({

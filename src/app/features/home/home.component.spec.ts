@@ -6,9 +6,10 @@ import {
 
 import { environment }   from '../../../environments/environment.test';
 import { HomeComponent } from './home.component';
+import { Logger }        from 'src/app/core/services/logger';
 
 !environment.testIntegration
-? console.log('Integration skipped')
+? Logger.log('Integration skipped')
 : describe('[Integration] HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
