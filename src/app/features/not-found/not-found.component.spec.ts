@@ -1,8 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  async,
+  ComponentFixture,
+  TestBed,
+}                            from '@angular/core/testing';
 
+import { environment }       from '../../../environments/environment.test';
 import { NotFoundComponent } from './not-found.component';
 
-describe('NotFoundComponent', () => {
+!environment.testIntegration
+? console.log('Integration skipped')
+: describe('[Integration] NotFoundComponent', () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;
 
