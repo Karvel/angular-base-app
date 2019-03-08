@@ -1,3 +1,4 @@
+/* tslint:disable:no-console */
 export class Logger {
   static error(message: string): void {
     console.error(message);
