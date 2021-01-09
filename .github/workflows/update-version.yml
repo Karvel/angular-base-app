@@ -1,0 +1,46 @@
+# This is a basic workflow to help you get started with Actions
+
+name: "Bump Version"
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the development branch
+  push:
+    branches: [development]
+    paths:
+      - "src/**"
+      - "!.github/**"
+      - "!e2e/**"
+      - "!README.md"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  bump-version:
+    name: "Bump Version on development"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout source code"
+        uses: "actions/checkout@v2"
+        with:
+          ref: ${{ github.ref }}
+      - name: "cat package.json"
+        run: cat ./package.json
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v1"
+        with:
+          node-version: 12
+      - name: "Automated Version Bump"
+        id: version-bump
+        uses: "phips28/gh-action-bump-version@master"
+        with:
+          tag-prefix: ""
+          target-branch: "development"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "cat package.json"
+        run: cat ./package.json
+      - name: "Output Step"
+        env:
+          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+        run: echo "new tag $NEW_TAG"
