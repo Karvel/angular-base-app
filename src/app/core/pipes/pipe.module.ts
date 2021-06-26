@@ -2,7 +2,6 @@ import { NgModule }     from '@angular/core';
 
 import { SafeHTMLPipe } from './safe-html.pipe';
 
-
 @NgModule({
   declarations: [
     SafeHTMLPipe,
@@ -14,7 +13,7 @@ import { SafeHTMLPipe } from './safe-html.pipe';
 export class PipeModule {
   static forRoot() {
     return {
-      ngModule: PipeModule,
+        ngModule: PipeModule,
     };
-  }
+}
 }
