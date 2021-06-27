@@ -8,8 +8,8 @@ import {
   AppRoutingModule,
   routedComponents as mainAppRoutedComponents,
 } from './app-routing.module';
-import { CoreModule } from './core/core.module';
-import { PipeModule } from './core/pipes/pipe.module';
+import { CoreModule } from './infrastructure/core/core.module';
+import { PipeModule } from './infrastructure/core/pipes/pipe.module';
 
 @NgModule({
   declarations: [AppComponent, mainAppRoutedComponents],

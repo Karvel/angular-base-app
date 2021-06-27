@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { environment } from '../../../environments/environment.test';
-import { Logger } from '../../core/services/logger';
+import { Logger } from '../../infrastructure/core/services/logger';
 import { NotFoundComponent } from './not-found.component';
 
 !environment.testIntegration

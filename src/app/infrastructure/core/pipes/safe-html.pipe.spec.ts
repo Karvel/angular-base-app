@@ -2,7 +2,7 @@ import { SecurityContext } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
 
-import { environment } from '../../../environments/environment.test';
+import { environment } from '../../../../environments/environment.test';
 import { Logger } from '../services/logger';
 import { SafeHTMLPipe } from './safe-html.pipe';
 
