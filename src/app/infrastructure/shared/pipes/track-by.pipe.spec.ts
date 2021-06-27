@@ -1,3 +1,4 @@
+import { Logger } from '../../utils/logger';
 import { TrackByPipe } from './track-by.pipe';
 
 describe('[Unit] TrackByPipe', () => {
@@ -17,6 +18,7 @@ describe('[Unit] TrackByPipe', () => {
 
   it(`should return null when given a falsy value`, () => {
     const key = 'test';
+    spyOn(Logger, 'warn');
 
     expect(pipe.transform(key)(1, '')).toEqual(null);
   });
@@ -24,7 +26,7 @@ describe('[Unit] TrackByPipe', () => {
   it(`should should show a console warning when it cannot use the provided key`, () => {
     const key = 'baz';
     const testPayload = [{ id: 1, test: 'foo' }];
-    const spy = spyOn(console, 'warn');
+    const spy = spyOn(Logger, 'warn');
     testPayload.forEach((item, index) => {
       pipe.transform(key)(index, item);
     });
