@@ -1,6 +1,6 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-export class RequiredValidation {
+export class RequiredValidator {
   /**
    * Returns an error if the passed in control has no value.
    */
