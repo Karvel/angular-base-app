@@ -1,21 +1,18 @@
-import { BrowserModule }       from '@angular/platform-browser';
-import { HttpClientModule }    from '@angular/common/http';
-import { NgModule }            from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent }        from './app.component';
+import { AppComponent } from './app.component';
 import {
   AppRoutingModule,
   routedComponents as mainAppRoutedComponents,
-}                              from './app-routing.module';
-import { CoreModule }          from './core/core.module';
-import { PipeModule }          from './core/pipes/pipe.module';
+} from './app-routing.module';
+import { CoreModule } from './core/core.module';
+import { PipeModule } from './core/pipes/pipe.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    mainAppRoutedComponents,
-  ],
+  declarations: [AppComponent, mainAppRoutedComponents],
   imports: [
     BrowserModule,
     CoreModule,
@@ -25,6 +22,6 @@ import { PipeModule }          from './core/pipes/pipe.module';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

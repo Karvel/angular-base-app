@@ -17,6 +17,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 This project is configured to run Continuous Integration (CI) with GitHub Actions. The CI builds the application, runs tests, and runs the linter. All of these jobs need to pass for the CI build to succeed. The config file is found [here](./.github/workflows/build-and-test.yml).
 
+### Prettier
+
+This project uses [Prettier](https://prettier.io/) to enforce code style. There are [`.prettierrc`](.prettierrc) and [`.prettierignore`](.prettierignore) configuration files to adjust some options. Prettier is also wired up to a [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). This DOES slightly slow down git, as it runs the hook on staged files every time `git commit` is executed.
+
+Prettier can be configured within [editors](https://prettier.io/docs/en/editors.html) so that it formats files on save, which helps minimize any changes the pre-commit hook would need to make.
+
 ### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
