@@ -3,8 +3,8 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment.test';
-import { Logger } from './infrastructure/utils/logger';
+import { environment } from '../../../environments/environment.test';
+import { Logger } from '../../infrastructure/utils/logger';
 
 !environment.testIntegration
   ? Logger.log('Integration skipped')
