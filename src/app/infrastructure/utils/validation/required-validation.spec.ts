@@ -1,7 +1,7 @@
 import { FormControl } from '@angular/forms';
 
-import { environment } from '../../../environments/environment.test';
-import { Logger } from '../../core/services/logger';
+import { environment } from '../../../../environments/environment.test';
+import { Logger } from '../logger';
 import { RequiredValidation } from './required-validation';
 
 !environment.testUnit
