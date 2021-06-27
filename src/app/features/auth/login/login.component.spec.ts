@@ -1,11 +1,11 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator';
 
-import { HomeComponent } from './home.component';
+import { LoginComponent } from './login.component';
 
-describe('[Integration] HomeComponent', () => {
-  let spectator: Spectator<HomeComponent>;
+describe('[Integration] LoginComponent', () => {
+  let spectator: Spectator<LoginComponent>;
   const createComponent = createComponentFactory({
-    component: HomeComponent,
+    component: LoginComponent,
   });
 
   beforeEach(() => (spectator = createComponent()));
