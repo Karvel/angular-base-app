@@ -1,5 +1,10 @@
 # AngularBaseApp
 
+| Branch      | Status                                                                                                                        |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| development | ![development](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=development) |
+| master      | ![master](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=master)           |
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3 and has been updated to version 12.1.0.
 
 ## Development server
