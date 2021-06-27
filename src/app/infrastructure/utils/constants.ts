@@ -1,7 +1,7 @@
 interface Constants {
   readonly DIGIT_REGEX: RegExp;
   readonly EMAIL_REGEX: RegExp;
-  initialCopyrightYear: number;
+  readonly initialCopyrightYear: number;
   readonly SYMBOL_REGEX: RegExp;
 }
 
