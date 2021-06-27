@@ -9,11 +9,4 @@ export class Utils {
       ? `${new Date().getFullYear()}`
       : `${CONSTANTS.initialCopyrightYear} - ${new Date().getFullYear()}`;
   }
-
-  public static isMobileDevice(): boolean {
-    return (
-      typeof window.orientation !== 'undefined' ||
-      navigator.userAgent.indexOf('IEMobile') !== -1
-    );
-  }
 }
