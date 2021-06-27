@@ -1,10 +1,10 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '../shared/shared.module';
 import { throwIfAlreadyLoaded } from './guards/module-import-guard.service';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [SharedModule],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
