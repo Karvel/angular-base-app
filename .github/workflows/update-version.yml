@@ -12,6 +12,7 @@ on:
       - "!.github/**"
       - "!e2e/**"
       - "!README.md"
+      - '!.vscode/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,7 +35,7 @@ jobs:
         id: version-bump
         uses: "phips28/gh-action-bump-version@master"
         with:
-          tag-prefix: ""
+          tag-prefix: "v"
           target-branch: "development"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
