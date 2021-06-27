@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class FormService {
   constructor() {}
 
-  public serializeObj(object: Object): string {
+  public serializeObj(object: object): string {
     let component: string;
     let serializedObject: string = '';
 
