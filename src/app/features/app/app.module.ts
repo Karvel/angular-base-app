@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { SharedModule } from '../../infrastructure/shared/shared.module';
 @NgModule({
   declarations: [AppComponent, mainAppRoutedComponents],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
     HttpClientModule,
