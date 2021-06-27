@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { MaterialModule } from './imports/material.module';
 import { PipeModule } from './pipes/pipe.module';
 
 import { components } from './components';
@@ -11,8 +12,13 @@ import { components } from './components';
  */
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, PipeModule.forRoot(), ReactiveFormsModule],
-  exports: [CommonModule, ReactiveFormsModule, components],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    PipeModule.forRoot(),
+    ReactiveFormsModule,
+  ],
+  exports: [CommonModule, MaterialModule, ReactiveFormsModule, components],
 })
 export class SharedModule {
   static forRoot(): { ngModule: typeof SharedModule } {
