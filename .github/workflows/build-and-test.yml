@@ -6,7 +6,7 @@ name: "Build, Test, and Lint"
 on:
   # Triggers the workflow on push or pull request events but only for the development branch
   push:
-    branches: [development, master]
+    branches: [development, main]
   pull_request:
     types: [opened, synchronize, reopened]
 
