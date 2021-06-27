@@ -1,29 +1,30 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { environment }       from '../../../environments/environment.test';
-import { Logger }            from 'src/app/core/services/logger';
+import { environment } from '../../../environments/environment.test';
+import { Logger } from 'src/app/core/services/logger';
 import { NotFoundComponent } from './not-found.component';
 
 !environment.testIntegration
-? Logger.log('Integration skipped')
-: describe('[Integration] NotFoundComponent', () => {
-  let component: NotFoundComponent;
-  let fixture: ComponentFixture<NotFoundComponent>;
+  ? Logger.log('Integration skipped')
+  : describe('[Integration] NotFoundComponent', () => {
+      let component: NotFoundComponent;
+      let fixture: ComponentFixture<NotFoundComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ NotFoundComponent ]
-    })
-    .compileComponents();
-  }));
+      beforeEach(
+        waitForAsync(() => {
+          TestBed.configureTestingModule({
+            declarations: [NotFoundComponent],
+          }).compileComponents();
+        }),
+      );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(NotFoundComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      beforeEach(() => {
+        fixture = TestBed.createComponent(NotFoundComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+      });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+      it('should create', () => {
+        expect(component).toBeTruthy();
+      });
+    });

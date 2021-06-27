@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FormService {
-  constructor() { }
+  constructor() {}
 
-  public serializeObj(object: Object): string {
+  public serializeObj(object: object): string {
     let component: string;
     let serializedObject: string = '';
 
@@ -15,7 +15,10 @@ export class FormService {
       }
     }
 
-    return serializedObject = serializedObject.substring(0, serializedObject.length - 1);
+    return (serializedObject = serializedObject.substring(
+      0,
+      serializedObject.length - 1,
+    ));
   }
 
   public serializeString(string: string): string {

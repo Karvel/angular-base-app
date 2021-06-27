@@ -1,29 +1,30 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { environment }   from '../../../environments/environment.test';
+import { environment } from '../../../environments/environment.test';
 import { HomeComponent } from './home.component';
-import { Logger }        from 'src/app/core/services/logger';
+import { Logger } from 'src/app/core/services/logger';
 
 !environment.testIntegration
-? Logger.log('Integration skipped')
-: describe('[Integration] HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+  ? Logger.log('Integration skipped')
+  : describe('[Integration] HomeComponent', () => {
+      let component: HomeComponent;
+      let fixture: ComponentFixture<HomeComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
-  }));
+      beforeEach(
+        waitForAsync(() => {
+          TestBed.configureTestingModule({
+            declarations: [HomeComponent],
+          }).compileComponents();
+        }),
+      );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      beforeEach(() => {
+        fixture = TestBed.createComponent(HomeComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+      });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+      it('should create', () => {
+        expect(component).toBeTruthy();
+      });
+    });
