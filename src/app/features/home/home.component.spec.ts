@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { environment } from '../../../environments/environment.test';
 import { HomeComponent } from './home.component';
-import { Logger } from '../../infrastructure/core/services/logger';
+import { Logger } from '../../infrastructure/utils/logger';
 
 !environment.testIntegration
   ? Logger.log('Integration skipped')

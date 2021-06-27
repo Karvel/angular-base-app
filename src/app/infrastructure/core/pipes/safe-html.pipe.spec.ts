@@ -3,7 +3,7 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { inject, TestBed } from '@angular/core/testing';
 
 import { environment } from '../../../../environments/environment.test';
-import { Logger } from '../services/logger';
+import { Logger } from '../../utils/logger';
 import { SafeHTMLPipe } from './safe-html.pipe';
 
 !environment.testUnit

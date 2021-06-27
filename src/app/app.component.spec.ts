@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.test';
-import { Logger } from './infrastructure/core/services/logger';
+import { Logger } from './infrastructure/utils/logger';
 
 !environment.testIntegration
   ? Logger.log('Integration skipped')
