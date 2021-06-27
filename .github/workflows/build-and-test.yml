@@ -7,13 +7,13 @@ on:
   # Triggers the workflow on push or pull request events but only for the development branch
   push:
     branches: [development, master]
-    pull_request:
-      types: [opened, synchronize, reopened]
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    name: Build and Test
+    name: Build, Test, and Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
