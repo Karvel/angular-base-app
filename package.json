@@ -1,6 +1,12 @@
 {
   "name": "angular-base-app",
   "version": "0.1.0",
+  "author": "Elanna Grossman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karvel/angular-base-app/issues"
+  },
+  "homepage": "https://github.com/Karvel/angular-base-app#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
