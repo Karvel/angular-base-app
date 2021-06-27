@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppModule } from './app.module';
 
-describe('AppModule', () => {
+describe('[Unit] AppModule', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [AppModule],
     });
   });
 
-  it('initializes', () => {
+  it('should initialize', () => {
     const module = TestBed.inject(AppModule);
     expect(module).toBeTruthy();
   });

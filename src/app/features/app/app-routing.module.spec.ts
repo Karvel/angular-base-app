@@ -5,7 +5,7 @@ import { AuthModule } from '../auth/auth.module';
 import { routes } from './app-routing.module';
 import { AppRoutingModule } from './app-routing.module';
 
-describe('AppRoutingModule', () => {
+describe('[Unit] AppRoutingModule', () => {
   let router: Router;
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -14,12 +14,12 @@ describe('AppRoutingModule', () => {
     router = TestBed.inject(Router);
   });
 
-  it('initializes', () => {
+  it('should initialize', () => {
     const module = TestBed.inject(AppRoutingModule);
     expect(module).toBeTruthy();
   });
 
-  it('loads the AuthModule children routes', async () => {
+  it('should load the AuthModule children routes', async () => {
     const route = router.config[1];
     if (typeof route.loadChildren === 'function') {
       expect(await route.loadChildren()).toEqual(AuthModule);

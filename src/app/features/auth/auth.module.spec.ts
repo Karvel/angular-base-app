@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AuthModule } from './auth.module';
 
-describe('AuthModule', () => {
+describe('[Unit] AuthModule', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [AuthModule],
     });
   });
 
-  it('initializes', () => {
+  it('should initialize', () => {
     const module = TestBed.inject(AuthModule);
     expect(module).toBeTruthy();
   });
