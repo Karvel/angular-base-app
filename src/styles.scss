@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+//#region Angular Material
+@import './styles/theme';
+//#endregion
+
 //#region Global Positioning
 body,
 html {
@@ -71,3 +75,12 @@ html {
   flex-direction: column;
 }
 //#endregion
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
