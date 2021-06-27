@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { PipeModule } from '../core/pipes/pipe.module';
+import { PipeModule } from './pipes/pipe.module';
 
 /**
  * Connects modules, pipes, directives, components, and modules that do not need to be singleton instances.
