@@ -23,6 +23,10 @@ This project uses [Prettier](https://prettier.io/) to enforce code style. There 
 
 Prettier can be configured within [editors](https://prettier.io/docs/en/editors.html) so that it formats files on save, which helps minimize any changes the pre-commit hook would need to make.
 
+### Webpack Bundle Analyzer
+
+The project includes [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer), to help determine the size of the project and its webpack dependencies. To use it, type `yarn run build:stats` in the project's directory in a terminal to create the webpack bundle. Run `yarn run analyze`, and webpack-bundle-analyzer will launch a server and browser window with a visualization of the bundle size.
+
 ### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
