@@ -11,9 +11,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-ci": "ng build --prod --sourceMap=false --base-href angular-base-app --deploy-url /angular-base-app",
     "test": "ng test",
+    "test-ci": "ng test -- --no-watch --no-progress --code-coverage --source-map true --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "e2e-ci": "ng e2e -- --protractor-config=e2e/protractor-ci.conf.js"
   },
   "private": true,
   "dependencies": {
