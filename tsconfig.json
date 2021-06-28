@@ -4,6 +4,10 @@
     "baseUrl": "./",
     "downlevelIteration": true,
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "module": "es2020",
@@ -14,5 +18,10 @@
     "lib": ["es2017", "dom"],
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }
