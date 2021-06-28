@@ -45,7 +45,8 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
-          directory: ./coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/angular-base-app
           name: codecov-umbrella
           fail_ci_if_error: true
           path_to_write_report: ./coverage/codecov_report.txt
