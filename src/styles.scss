@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+//TODO: Re-enable when working with stackblitz: https://github.com/stackblitz/core/issues/966
+//#region Angular Material
+// @import './styles/_theme.scss';
+//#endregion
+
+//#region Global Positioning
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.holy-grail {
+  min-height: 100vh;
+}
+
+.holy-grail,
+.holy-grail-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.holy-grail-content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.holy-grail-child {
+  display: flex;
+  justify-content: center;
+}
+
+.content-expand {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  /**
+  * Body items are now side by side
+  */
+  .holy-grail-body {
+    flex-direction: row;
+  }
+
+  .hg-sidebar {
+    flex: 0 0 260px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.child {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+//#endregion
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

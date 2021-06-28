@@ -1,9 +1,9 @@
 # AngularBaseApp
 
-| Branch      | Status                                                                                                                        |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| development | ![development](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=development) |
-| main        | ![main](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=main)               |
+| Branch      | Status                                                                                                                        | Coverage                                                                                                                                      |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| development | ![development](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=development) | [![codecov](https://codecov.io/gh/Karvel/angular-base-app/branch/development/graph/badge.svg)](https://codecov.io/gh/Karvel/angular-base-app) |
+| main        | ![main](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=main)               | [![codecov](https://codecov.io/gh/Karvel/angular-base-app/branch/main/graph/badge.svg)](https://codecov.io/gh/Karvel/angular-base-app)        |
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3 and has been updated to version 12.1.0.
 
@@ -16,6 +16,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ### CI
 
 This project is configured to run Continuous Integration (CI) with GitHub Actions. The CI builds the application, runs tests, and runs the linter. All of these jobs need to pass for the CI build to succeed. The config file is found [here](./.github/workflows/build-and-test.yml).
+
+### Prettier
+
+This project uses [Prettier](https://prettier.io/) to enforce code style. There are [`.prettierrc`](.prettierrc) and [`.prettierignore`](.prettierignore) configuration files to adjust some options. Prettier is also wired up to a [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). This DOES slightly slow down git, as it runs the hook on staged files every time `git commit` is executed.
+
+Prettier can be configured within [editors](https://prettier.io/docs/en/editors.html) so that it formats files on save, which helps minimize any changes the pre-commit hook would need to make.
+
+### Webpack Bundle Analyzer
+
+The project includes [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer), to help determine the size of the project and its webpack dependencies. To use it, type `yarn run build:stats` in the project's directory in a terminal to create the webpack bundle. Run `yarn run analyze`, and webpack-bundle-analyzer will launch a server and browser window with a visualization of the bundle size.
 
 ### Code scaffolding
 
