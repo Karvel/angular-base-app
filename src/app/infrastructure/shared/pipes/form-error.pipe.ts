@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({ name: 'formError' })
 export class FormErrorPipe implements PipeTransform {
-  public transform(value: string | object): string {
+  public transform(value: string | object | null): string {
     if (!value) {
       return '';
     }
