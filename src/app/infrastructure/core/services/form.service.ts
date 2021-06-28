@@ -1,29 +1,24 @@
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormService {
-  constructor() {}
-
-  public serializeObj(object: object): string {
-    let component: string;
-    let serializedObject: string = '';
-
-    for (const property in object) {
-      if (object.hasOwnProperty(property)) {
-        component = `${property}=${encodeURIComponent(object[property])}&`;
-        serializedObject = serializedObject + component;
+  /**
+   * Build a request payload from the matching `FormGroup` values.
+   * Does not handle conditional logic.
+   */
+  public buildRequestPayload<T>(form: FormGroup, requestPayload: T): T {
+    for (const property in requestPayload) {
+      if (
+        requestPayload.hasOwnProperty(property) &&
+        form.controls[property]?.value
+      ) {
+        requestPayload[property] = form.controls[property].value;
       }
     }
 
-    return (serializedObject = serializedObject.substring(
-      0,
-      serializedObject.length - 1,
-    ));
-  }
-
-  public serializeString(string: string): string {
-    return encodeURIComponent(string);
+    return requestPayload;
   }
 }
