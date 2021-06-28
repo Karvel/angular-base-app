@@ -1,9 +1,9 @@
 # AngularBaseApp
 
-| Branch      | Status                                                                                                                        |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| development | ![development](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=development) |
-| main        | ![main](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=main)               |
+| Branch      | Status                                                                                                                        | Coverage                                                                                                                                      |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| development | ![development](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=development) | [![codecov](https://codecov.io/gh/Karvel/angular-base-app/branch/development/graph/badge.svg)](https://codecov.io/gh/Karvel/angular-base-app) |
+| main        | ![main](https://github.com/Karvel/angular-base-app/workflows/Build,%20Test,%20and%20Lint/badge.svg?branch=main)               | [![codecov](https://codecov.io/gh/Karvel/angular-base-app/branch/main/graph/badge.svg)](https://codecov.io/gh/Karvel/angular-base-app)        |
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3 and has been updated to version 12.1.0.
 
