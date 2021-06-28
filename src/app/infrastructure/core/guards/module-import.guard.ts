@@ -6,7 +6,7 @@ import { CoreModuleImportError } from '../../models/error';
  */
 export class ModuleImportGuard {
   static throwIfAlreadyLoaded(
-    parentModule: CoreModule,
+    parentModule: CoreModule | null,
     moduleName: string,
   ): void {
     if (parentModule) {
