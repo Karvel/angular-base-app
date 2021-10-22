@@ -14,10 +14,9 @@ describe('[Unit] ModuleImportGuard', () => {
   });
   describe('throwIfAlreadyLoaded()', () => {
     it(`does nothing when not passed a CoreModule`, () => {
-      const noModule: CoreModule = null;
       const moduleName = '';
       expect(
-        ModuleImportGuard.throwIfAlreadyLoaded(noModule, moduleName),
+        ModuleImportGuard.throwIfAlreadyLoaded(null, moduleName),
       ).toBeUndefined();
     });
 

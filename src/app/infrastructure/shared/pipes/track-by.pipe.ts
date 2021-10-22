@@ -4,13 +4,13 @@ import { Logger } from '../../utils/logger';
 
 @Pipe({ name: 'trackBy' })
 export class TrackByPipe implements PipeTransform {
-  public transform(key: string): <T, U>(index: number, value: T) => U | null {
-    return function trackByKey<T, U>(index: number, value: T): U | null {
+  public transform(key: string): (index: number, value: any) => any | null {
+    return function trackByKey(index: number, value: any): any | null {
       if (value[key] === undefined) {
         Logger.warn(`Key '${key}' not found in *ngFor.`);
       }
 
-      return value ? (value[key] as U) : null;
+      return value ? value[key] : null;
     };
   }
 }
