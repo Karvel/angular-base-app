@@ -101,4 +101,21 @@ describe('[Unit] MatchFieldValidator', () => {
       expect(confirmControl?.errors).toEqual(expectedValue);
     });
   });
+
+  describe(`validFieldMatch() with parameters that do not match the passed in form`, () => {
+    const matchFieldValidator = MatchFieldValidator.validFieldMatch(
+      'controlName',
+      'confirmControlName',
+    );
+    const form = new FormGroup({});
+    const control = form.get('controlName');
+    const confirmControl = form.get('confirmControlName');
+
+    it(`should have controlValue and confirmControlName values that equal null`, () => {
+      matchFieldValidator(form);
+      const expectedValue = null;
+      expect(control).toEqual(expectedValue);
+      expect(confirmControl).toEqual(expectedValue);
+    });
+  });
 });
