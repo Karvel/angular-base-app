@@ -18,6 +18,12 @@ describe('[Unit] FormErrorPipe', () => {
     expect(pipe.transform(error)).toEqual(expectedValue);
   });
 
+  it('should return an empty string if the error is undefined', () => {
+    const error = undefined;
+    const expectedValue = '';
+    expect(pipe.transform(error)).toEqual(expectedValue);
+  });
+
   it('should return the parameter when it is not an object', () => {
     const error = 'test';
     expect(pipe.transform(error)).toEqual(error);

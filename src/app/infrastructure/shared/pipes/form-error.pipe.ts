@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ValidationErrors } from '@angular/forms';
 
 /**
  * Returns the first error value in the `AbstractControl` error object.
@@ -6,15 +7,24 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({ name: 'formError' })
 export class FormErrorPipe implements PipeTransform {
-  public transform(value: any): string {
+  public transform(
+    value: ValidationErrors | string | null | undefined,
+  ): string {
+    if (typeof value === 'string') {
+      return value;
+    }
     if (!value) {
       return '';
     }
-    if (typeof value !== 'object') {
-      return value;
+    const keys = Object.keys(value);
+    if (keys.length === 0) {
+      return '';
     }
-    const key: string = value[Object.keys(value)[0]];
-
-    return key;
+    const firstKey = keys[0];
+    const firstValue = value[firstKey];
+    if (typeof firstValue === 'string') {
+      return firstValue;
+    }
+    return '';
   }
 }

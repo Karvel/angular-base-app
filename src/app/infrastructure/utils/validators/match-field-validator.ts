@@ -7,26 +7,26 @@ export class MatchFieldValidator {
     fieldName: string = 'Password',
   ): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
+      const confirmControl: AbstractControl | null =
+        control.get(confirmControlName);
       const controlValue: unknown | null = control.get(controlName)?.value;
-      const confirmControlValue: unknown | null =
+      const confirmValue: unknown | null =
         control.get(confirmControlName)?.value;
 
-      if (!confirmControlValue) {
-        control.get(confirmControlName)?.setErrors({
+      if (!confirmValue) {
+        confirmControl?.setErrors({
           confirmFieldRequired: `Confirm ${fieldName} is required.`,
         });
       }
 
-      if (controlValue !== confirmControlValue) {
-        control
-          .get(confirmControlName)
-          ?.setErrors({
-            fieldsMismatched: `${fieldName} fields do not match.`,
-          });
+      if (controlValue !== confirmValue) {
+        confirmControl?.setErrors({
+          fieldsMismatched: `${fieldName} fields do not match.`,
+        });
       }
 
-      if (controlValue && controlValue === confirmControlValue) {
-        control.get(confirmControlName)?.setErrors(null);
+      if (controlValue && controlValue === confirmValue) {
+        confirmControl?.setErrors(null);
       }
 
       return null;
